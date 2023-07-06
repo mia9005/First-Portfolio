@@ -285,6 +285,9 @@ export default {
     background-color: rgb(245,245,245);
   }
 
+  .career-list > img {
+    width: 100%;
+  }
 }
 /* tablet version */
 @media (min-width: 700px){
@@ -388,11 +391,13 @@ export default {
   #about {
     padding: 5%;
     row-gap: 10vh;
+    align-items: center;
   }
   .about-information {
     row-gap: 8vh;
-    justify-content: flex-start;
-    width: 70%;
+    justify-content: start;
+    width: 90%;
+    padding-left: 9%;
   }
   .about-information > aside {
   width: 32%;
