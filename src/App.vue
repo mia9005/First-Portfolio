@@ -90,11 +90,11 @@ export default {
     position: relative;
     padding: 3%;
   }
-  .nav-link{
+  .navbar a{
     text-decoration: none;
     color: black;
   }
-  .nav-link:hover {
+  .navbar a:hover {
     color: steelblue;
   }
   details {

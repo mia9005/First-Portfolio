@@ -7,7 +7,7 @@
                 </div>
                 <details>
                     <summary class="fa-solid fa-bars"></summary>
-                    <ul>
+                    <ul class="navbar">
                         <li>
                             <a href="#" @click.prevent="getSection('about')"><p>About Me</p></a>
                             
