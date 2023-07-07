@@ -1,10 +1,14 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <NavHeader/>
+  <NavHeader @getSection="scrollSection"/>
+    <span ref="about"></span>
   <AboutComponent/>
+      <span ref="skill"></span>
   <SkillComponent/>
+      <span ref="project"></span>
   <ProjectComponent/>
+      <span ref="career"></span>
   <CareerComponent/>
   <FooterComponent/>
   <router-view/>
@@ -29,6 +33,16 @@ export default {
     ProjectComponent,
     CareerComponent,
     FooterComponent
+  },
+  methods: {
+    scrollSection(name) {
+            const top = this.$refs[(name)].offsetTop;
+            window.scrollTo({
+                top: top,
+                left: 0,
+                behavior: 'smooth'
+            });
+        },
   }
 }
 </script>

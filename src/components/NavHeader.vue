@@ -9,32 +9,40 @@
                     <summary class="fa-solid fa-bars"></summary>
                     <ul>
                         <li>
-                            <router-link to="#about" class="nav-link">About me</router-link>
+                            <a href="#" @click.prevent="getSection('about')"><p>About Me</p></a>
+                            
                         </li>
                         <li>
-                            <router-link to="#skill" class="nav-link">Skills</router-link>
+                            <a href="#" @click.prevent="getSection('skill')"><p>Skill</p></a>
+                            
                         </li>
                         <li>
-                            <router-link to="#project" class="nav-link">Projects</router-link>
+                            <a href="#" @click.prevent="getSection('project')"><p>Project</p></a>
+                            
                         </li>
                         <li>
-                            <router-link to="#career" class="nav-link">Career</router-link>
+                            <a href="#" @click.prevent="getSection('career')"><p>Career</p></a>
+                            
                         </li>
                     </ul>
                 </details>
                 <nav>
                     <ul class="navbar">
                         <li>
-                            <router-link to="#about" class="nav-link">About me</router-link>
+                            <a href="#" @click.prevent="getSection('about')"><p>About Me</p></a>
+                            
                         </li>
                         <li>
-                            <router-link to="#skill" class="nav-link">Skills</router-link>
+                            <a href="#" @click.prevent="getSection('skill')"><p>Skill</p></a>
+                            
                         </li>
                         <li>
-                            <router-link to="#project" class="nav-link">Projects</router-link>
+                            <a href="#" @click.prevent="getSection('project')"><p>Project</p></a>
+                            
                         </li>
                         <li>
-                            <router-link to="#career" class="nav-link">Career</router-link>
+                            <a href="#" @click.prevent="getSection('career')"><p>Career</p></a>
+                            
                         </li>
                     </ul>
                 </nav>
@@ -56,6 +64,11 @@
 
 <script>
 export default {
-    name: "NavHeader"
+    name: "NavHeader",
+    methods : {
+    getSection(sectionName){
+      this.$emit("getSection", sectionName);
+    }
+  }
 }
 </script>
